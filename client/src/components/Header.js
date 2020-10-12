@@ -1,7 +1,10 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link  } from "react-router-dom";
+import contact from '../Contact';
 
 function Header() {
   return (
+    <Router>
     <header class="header">
       <div class="header__top">
         <div class="container">
@@ -94,7 +97,7 @@ function Header() {
                   <a href="./blog.html">Blog</a>
                 </li>
                 <li>
-                  <a href="./contact.html">Contact</a>
+                  <Link to="/Contact">Contact</Link>
                 </li>
               </ul>
             </nav>
@@ -124,6 +127,8 @@ function Header() {
         </div>
       </div>
     </header>
+    
+    </Router>
   );
 }
 
