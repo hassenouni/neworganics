@@ -206,4 +206,4 @@ function LatestProduct() {
   );
 }
 
-export default Latest - product;
+export default LatestProduct;
