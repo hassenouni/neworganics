@@ -1,23 +1,22 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Categories from "./components/Categories";
-import Featured from "./components/Featured";
-import LatestProduct from "./components/LatestProduct";
-import Blog from "./components/Blog";
-import Footer from "./components/Footer";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import NavbarContainer from "./containers/Navbar-container"
+import Homepage from "./containers/Homepage-container";
+
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <Categories />
-      <Featured />
-      <LatestProduct />
-      <Blog />
-      <Footer />
+      <NavbarContainer />
+      <BrowserRouter>
+      <Switch>
+      <Route exact path='/' component={Homepage} />
+      
+      
+      </Switch>
+      </BrowserRouter>
+     
     </div>
   );
 }
